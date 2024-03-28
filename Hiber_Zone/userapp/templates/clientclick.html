@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .profile-icon {
+            width: 100px; /* Adjust the size as needed */
+            height: 100px;
+            border-radius: 50%; /* Make the image circular */
+            object-fit: cover; /* Ensure the image covers the entire circle */
+            border: 2px solid #fff; /* Optional: add a border */
+        }
+        h1 {
+            text-align: center;
+        }
+    </style>
+    <title>User Profile</title>
+</head>
+<body>
+    <h1>User Profile Page</h1>
+    <!-- Replace "images/profile.png" with the correct path to the user's profile image -->
+    <img class="profile-icon" src="{% static 'images/profile.png' %}" alt="User Profile Image">
+</body>
+</html>

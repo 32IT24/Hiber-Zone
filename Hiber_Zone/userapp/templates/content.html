@@ -1,0 +1,93 @@
+{% extends "home.html" %}
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<head>
+ <!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="{% static 'css/final.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/content.css' %}">
+<!-- Bootstrap JS and Popper.+++++++++++++++++js (required for Bootstrap dropdowns) -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+<div id="header">
+    <div id="chips-wrapper">
+        <div id="chips-content">
+            <div id="scroll-container">
+                <div id="chips" role="tablist">
+                    <button class="chip-btn" role="tab"><a href="?">All</a></button>
+                    <button class="chip-btn" role="tab"><a href="?keyword=sketchcomedy">Sketch Comedy</a></button>
+                    <button class="chip-btn" role="tab"><a href="?keyword=interesting">Interesting Facts</a></button>
+                    <button class="chip-btn" role="tab"><a href="?keyword=music">Music</a></button>
+                    <button class="chip-btn" role="tab"><a href="?keyword=entertainment">Entertainment</a></button>
+                    <button class="chip-btn" role="tab"><a href="?keyword=motivation">Motivation</a></button>
+                    <button class="chip-btn" role="tab"><a href="?keyword=Telugu">Telugu</a></button>
+                    <button class="chip-btn" role="tab"><a href="?keyword=Relief">Relief</a></button>
+                    <button class="chip-btn" role="tab"><a href="?keyword=fun,funny">Fun</a></button>
+                    <button class="chip-btn" role="tab"><a href="?keyword=instagram">Instagram</a></button>
+                    <!-- Add more filter buttons as needed -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+<div class="container">
+    <div class="row">
+        {% for video in videos %}
+        <div class="col-md-4">
+            {% if video.video_file %}
+            <video width="320" height="240" controls>
+                <source src="{{ video.video_file.url }}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            {% elif video.video_url %}
+            {% if 'instagram.com' in video.video_url %}
+            <!-- Display Instagram link -->
+            <a href="{{ video.video_url }}" target="_blank" style="display: flex; flex-direction: column; align-items: center;">
+                <img src="{% static 'images/insta.png' %}" alt="Instagram Post" width="300" height="300">
+                <p style="text-align: center;">{{ video.title }}</p>
+            {% else %}
+            <!-- Display YouTube or other video iframe -->
+            <iframe width="320" height="240" src="{{ video.video_url }}" frameborder="0" allowfullscreen></iframe>
+            {% endif %}
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+
+<br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+
+<script>
+    
+    // Add click event listener to filter buttons
+    document.querySelectorAll('.chip-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            const keyword = button.textContent.trim(); // Get the text content of the button
+            const url = new URL(window.location.href); // Get current URL
+            url.searchParams.set('keyword', keyword); // Set the keyword parameter in the URL
+    
+            // Toggle the 'active' class on the clicked button
+            button.classList.toggle('active');
+    
+            // Call the function to save selected filters
+            saveFilters();
+
+        });
+    });
+    </script>
+    
+
+</body>
+</html>
+{% endblock %}

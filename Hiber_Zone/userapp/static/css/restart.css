@@ -1,0 +1,78 @@
+body{
+    background-color:lightgreen !important;
+    background-image: none !important;
+}
+
+
+.cover {
+    background-image: url("/static/images/min.png");
+    background-size: cover;
+    height: 500px;
+    text-align: right;
+}
+
+.content {
+    position: relative;
+}
+
+.content h1 {
+    position: absolute;
+    top: 120%; /* Adjust the vertical position down */
+    margin-top: 280px;
+    margin-right:350px;
+    right: 10%; /* Adjust the horizontal position */
+    /* transform: translateY(-50%); /* Move the text up by half of its height to center it vertically */
+    font-size: 60px; 
+    font-weight: bold;
+    padding: 20px;
+    color: #000000; /* White text color */
+    text-shadow: 0 0 10px rgb(255, 0, 0); /* Text glow effect */
+    animation: fadeInRight 1.5s ease-in-out; /* Animation */
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateY(50px); /* Move the text to the right */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0); /* Reset the position */
+    }
+}
+
+
+section.restart {
+    margin-top: 3px;
+    background-color:rgb(232, 145, 145);
+    text-align:center;
+    text-wrap: pretty;
+    color: white;
+}
+
+section.restart:hover {
+    background-color:rgb(232, 145, 145);
+    text-align:center;
+    text-wrap: pretty;  
+    color: white;
+}
+
+section.restart h2 {
+    margin-left: 20px;
+    color: white;
+    text-align: center;
+    text-wrap: pretty;
+    margin-bottom: 10px;
+    letter-spacing: 3;
+    line-height: 3;
+  }
+  
+  section.restart h5 {
+    margin-left: 20px;
+    color: white;
+    text-align: center;
+    text-wrap: pretty;
+    line-height: 3;
+    letter-spacing: 3;
+  }
+  

@@ -1,0 +1,78 @@
+body {
+  background-image: url("/static/images/grad.png") !important;
+  background-color: lightgreen !important;
+  margin: auto;
+  width: auto;
+}
+
+.container {
+  margin-top: 5px; /* Add margin gap from the navbar */
+}
+
+/* Video list styles */
+.row {
+  justify-content: space-between;
+  margin-left: -410px;
+  margin-top: 89px;
+}
+
+/* Individual video item styles */
+.col-md-4 {
+  margin-bottom: 40px; /* Add some bottom margin to create a gap between videos */
+}
+
+#header {
+  border-top: solid white 0.5px;
+  margin-left:auto;
+  width: 100%;
+  padding: 10px;
+  background-color:rgb(7, 7, 67);
+}
+
+#chips-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+#filter {
+  margin: 0 10px;
+  margin-bottom: 10px;
+  border: none; /* Remove border */
+}
+
+#chips {
+  display: flex;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer/Edge */
+}
+
+#chips::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  background-color: transparent;
+ 
+}
+.chip-btn {
+  margin-right: 10px;
+  background-color:rgba(57, 57, 103, 0.481);
+  border: none 1px rgba(255, 255, 255, 0.275);
+  border-radius: 5px;
+  margin-inline: 10px;
+  justify-content: space-between;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.instagram-post {
+  text-align: center;
+}
+
+.post-title {
+  margin-top: 10px; /* Adjust margin as needed */
+}

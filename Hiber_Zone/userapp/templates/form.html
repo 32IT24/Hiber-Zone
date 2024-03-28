@@ -1,0 +1,34 @@
+<!-- form.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="1989.jpg">
+    <link rel="stylesheet" href="style.css">
+    <title>Time for Tay</title>
+</head>
+<body>
+    <div id="bg2">
+        <div id="menu"> 
+            <h1>Taylor Nation</h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="albums.html">Albums</a></li>
+                <li><a href="tours.html">Tours</a></li>
+            </ul>
+        </div>
+        <section class="reg">
+            <caption>Sign Up</caption><br><br>
+            <div class="Data">
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit">Submit</button>
+                </form>
+            </div>       
+        </section>
+    </div>
+</body>
+</html>

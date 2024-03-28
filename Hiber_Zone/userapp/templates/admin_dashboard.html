@@ -1,0 +1,71 @@
+{% extends 'admin_base.html' %}
+{% load static %}
+{% block content %}
+{% include 'admincards.html' %}
+
+<br><br><br><br><br>
+<br><br><br><br><br>
+<div class="container">
+    <div class="row">
+        <div class="panel panel-primary" style="margin-left:2%;">
+            <div class="panel-heading" style="text-align:center;">
+                <h6 class="panel-title">Recent Clients</h6>
+            </div>
+            <table class="table table-hover" id="dev-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Diagnosis</th>
+                        <th>Mobile</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for c in client %}
+                    <tr>
+                        <td>{{ c.get_name }}</td>
+                        <td>{{ c.diagnosis }}</td>
+                        <td>{{ c.mobile }}</td>
+                        {% if c.status %}
+                        <td><span class="label label-primary">Ongoing</span></td>
+                        {% else %}
+                        <td><span class="label label-primary">On Hold</span></td>
+                        {% endif %}
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <br><br><br><br><br><br><br><br><br><br>
+        <div class="panel panel-primary" style="margin-left:5%;">
+            <div class="panel-heading" style="text-align:center;">
+                <h6 class="panel-title">Recent Therapists</h6>
+            </div>
+            <table class="table table-hover" id="dev-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Department</th>
+                        <th>Mobile</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for T in Therapist %}
+                    <tr>
+                        <td>{{ T.get_name }}</td>
+                        <td>{{ T.department }}</td>
+                        <td>{{ T.mobile }}</td>
+                        {% if T.status %}
+                        <td><span class="label label-primary">On-going</span></td>
+                        {% else %}
+                        <td><span class="label label-primary">On Hold</span></td>
+                        {% endif %}
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

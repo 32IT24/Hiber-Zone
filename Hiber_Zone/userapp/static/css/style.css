@@ -1,0 +1,75 @@
+/* style.css */
+body {
+    background-image: url("/static/images/bg1.png");
+}
+.container {
+    width: 600px;
+    margin: 0 auto;
+    padding: 60px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color:beige;
+    margin-right: 450px;
+}
+
+h1 {
+    margin-top: 0;
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 20px; /* Add some space between h1 and h2 */
+  
+}
+
+h1 + h2 {
+    border-top: 1px solid #001f02; /* Add a thin line above h2 */
+    padding-top: 20px; /* Add some space between the line and h2 */
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:green;
+}
+
+h2 {
+    margin-top: 0;
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 20px; /* Add some space between h1 and h2 */
+    color:green;
+    
+}
+
+form {
+    margin-bottom: 8px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+button {
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 8px;
+}
+
+button {
+    margin-top: 15px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #001f02;
+    margin: 20px 0;
+}

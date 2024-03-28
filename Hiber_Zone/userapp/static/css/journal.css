@@ -1,0 +1,60 @@
+body{
+    background-color:lightgreen !important;
+    background-image: none !important;
+}
+
+
+.cover {
+    background-image: url("/static/images/jo2.png");
+    background-size: cover;
+    height: 550px;
+    text-align: right;
+}
+
+.content {
+    position: relative; /* Add position relative to create a stacking context */
+}
+
+.content h1 {
+    position: absolute; /* Make the heading position absolute */
+    top: 120px; /* Adjust the vertical position of the heading */
+    left: 140px; /* Adjust the horizontal position of the heading */
+    color:white;
+    font-size: xx-larger;
+
+}
+
+section.relax {
+    margin-top: 3px;
+    background-color: #fcba03;
+    text-align:center;
+    text-wrap: pretty;
+    color: white;
+}
+
+section.relax:hover {
+    background-color:#fcba03;
+    text-align:center;
+    text-wrap: pretty;  
+    color: white;
+}
+
+section.relax h2 {
+    margin-left: 20px;
+    color: white;
+    text-align: center;
+    text-wrap: pretty;
+    margin-bottom: 10px;
+    letter-spacing: 3;
+    line-height: 3;
+  }
+  
+  section.relax h5 {
+    margin-left: 20px;
+    color: white;
+    text-align: center;
+    text-wrap: pretty;
+    line-height: 3;
+    letter-spacing: 3;
+  }
+  

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/final.css' %}">
+
+
+</head>
+<body>
+  <header>
+  
+  
+    <nav class="navbar navbar-expand-md bg navbar-dark">
+      <div class="container">
+        <div class="logo">
+          <img src="{% static 'images/panda.png' %}" alt="App Logo"><h1 style="margin-right: 800px; margin-bottom: 25px;"> HiberZone </h1> 
+      </div>    
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#Mynav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="Mynav">
+          <ul class="navbar-nav ml-auto center">
+             <li id="menu_home" class="nav-item {% if request.path == '/' %}active{% endif %}"><a href="." class="nav-link">Home</a></li>
+             <li id="menu_relax" class="nav-item dropdown {% if request.path == '/relax' %}active{% endif %}">
+              <a href="{% url 'relax' %}" class="nav-link dropdown-toggle" data-toggle="dropdown">Relax</a>
+              <ul class="dropdown-menu">
+                <h3 class="dropdown-item"><a href="{% url 'login_or_signup' %}">Content </a></h3>
+                <div class="dropdown-divider"></div>
+                <h3 class="dropdown-item">Activities</h3>
+              </ul>
+            </li>
+            <li id="menu_recover" class="nav-item dropdown {% if request.path == '/recover' %}active{% endif %}">
+              <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Recover</a>
+              <ul class="dropdown-menu">
+                <h3 class="dropdown-header">Therapists</h3>
+                <a href="#" class="dropdown-item">Source List</a>
+                <a href="#" class="dropdown-item">Contact Info</a>          
+                <div class="dropdown-divider"></div>
+                <h3 class="dropdown-header">Motivation</h3>
+                <a href="#" class="dropdown-item">Personal Experiences</a>
+                <a href="#" class="dropdown-item">Ted Talks</a>
+                <a href="#" class="dropdown-item">Content Recommendations</a>
+              </ul>
+            </li>
+            <li id="menu_restart" class="nav-item dropdown {% if request.path == '/restart' %}active{% endif %}">
+              <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Restart</a>
+              <ul class="dropdown-menu">
+                <a href="#" class="dropdown-item">To-do's</a>
+                <a href="#" class="dropdown-item">Reminders</a>
+                <a href="#" class="dropdown-item">Your Progress</a>  
+              </ul>
+            </li>
+            <li id="menu_journal" class="nav-item {% if request.path == '/journal' %}active{% endif %}">
+              <a href="journal" class="nav-link">Journal</a></li>  
+          
+          
+        </div>
+      </div>
+    </nav>
+  </header>
+  
+     
+      
+    
+</body>
+</html>

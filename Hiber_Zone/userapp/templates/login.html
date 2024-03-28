@@ -1,0 +1,46 @@
+<!-- login.html -->
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1> Sorry! you need to be a member of the Hiberzone community to access the content page :|</h1>
+        
+        <h2>User Login</h2>
+        <form method="post" action="{% url 'login_or_signup' %}">
+            {% csrf_token %}
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username" required><br>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" required><br>
+            <button type="submit" name="login">Login</button>
+        </form>
+
+        <hr>
+
+        <h2>User Signup</h2>
+        <form method="post" action="{% url 'login_or_signup' %}">
+            {% csrf_token %}
+            <label for="new_username">New Username:</label><br>
+            <input type="text" id="new_username" name="new_username" required><br>
+            <label for="new_password">New Password:</label><br>
+            <input type="password" id="new_password" name="new_password" required><br>
+            <label for="first_name">First Name:</label><br>
+            <input type="text" id="first_name" name="first_name" required><br>
+            <label for="last_name">Last Name:</label><br>
+            <input type="text" id="last_name" name="last_name" required><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br>
+            <button type="submit" name="signup">Signup</button>
+        </form>
+
+        {% if error %}
+        <p>{{ error }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>

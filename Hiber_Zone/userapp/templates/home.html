@@ -1,0 +1,13 @@
+{% load static %}
+    <head>
+        <link rel="icon" href="{% static 'images/panda.png' %}">
+        <title>Hiber-Zone</title>
+    </head>
+    
+<body>
+    {% include "navbar.html" %}
+    {% block content %}
+    {% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+body{
+    background-color:lightgreen !important;
+    background-image: none !important;
+}
+.cover {
+    background-image: url("/static/images/6.jpeg");
+    background-size: cover;
+    height: 500px;
+    text-align: right;
+}
+
+.content {
+    position: relative;
+}
+
+.content h1 {
+    position: absolute;
+    top: 120%; /* Adjust the vertical position down */
+    margin-top: 150px;
+    right: 10%; /* Adjust the horizontal position */
+    /* transform: translateY(-50%); /* Move the text up by half of its height to center it vertically */
+    font-size: 50px; 
+    font-weight: bold;
+    padding: 20px;
+    margin-right: -100px;
+    color: #fff; /* White text color */
+    text-shadow: 0 0 10px rgba(66, 204, 16, 0.7); /* Text glow effect */
+    animation: fadeInRight 1.5s ease-in-out; /* Animation */
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(50px); /* Move the text to the right */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0); /* Reset the position */
+    }
+}
+
+
+section.relax {
+    margin-top: 3px;
+    background-color:rgb(56, 94, 56);
+    text-align:center;
+    text-wrap: pretty;
+    color: white;
+}
+
+section.relax:hover {
+    background-color:rgb(56, 94, 56);
+    text-align:center;
+    text-wrap: pretty;  
+    color: white;
+}
+
+section.relax h2 {
+    margin-left: 20px;
+    color: white;
+    text-align: center;
+    text-wrap: pretty;
+    margin-bottom: 10px;
+    letter-spacing: 3;
+    line-height: 3;
+  }
+  
+  section.relax h5 {
+    margin-left: 20px;
+    color: white;
+    text-align: center;
+    text-wrap: pretty;
+    line-height: 3;
+    letter-spacing: 3;
+  }
+/* button_styles.css */
+
+.button-style {
+    background-color: white;
+    color:  #4CAF50;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-left: 30px;
+}
+
+.button-style:hover {
+    background-color: #45a049;
+}

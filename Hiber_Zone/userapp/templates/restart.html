@@ -1,0 +1,103 @@
+{% extends "homepage.html" %}
+
+{% load static %}
+{% include "navbar.html" %}
+{% block content %}
+<head>
+ <!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/final.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/restart.css' %}">
+
+<!-- Bootstrap JS and Popper.+++++++++++++++++js (required for Bootstrap dropdowns) -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+</head>
+
+<body>
+ 
+  <div class="cover">
+    <div class="content">
+    <h1> 1, 2, 3...Restart!</h1>
+   </div>
+</div>
+
+
+<!-- Scroll Down Indicator -->
+<!-- Target Element for Scrolling -->
+<div id="about">
+<div>
+ <section class="restart">
+  <br><br>
+  <h2> The Restart Zone</h2>
+  <br><br>
+  <h5> Restarting after healing allows for personal growth, it's an important step towards reclaiming control and steering towards a brighter future. Get back to your daily routines, efficiency and productive or embark a new beginning by creating new goals. </h5>
+  <h5>
+      Rise, grind and restart here! </h5>
+    <br>
+
+<br><br>
+<!--   <button type="button">Relax</button>
+ 
+  <button type="button">Recover</button>
+
+  <button type="button">Restart</button> 
+
+
+  <br><br><br><br><br><br>
+</section> 
+</div>
+
+<div class="special">
+  <br><br><br><br><br><br>
+  <h2> What makes Hiber-zone special?</h2>
+  <br><br><br>
+  <div class="nested-section">
+    <h3> RELAX </h3>
+   <!--  <img src="{% static 'images/content.png' %}" alt="Image 1"> 
+    <h6>~ Browse Content ~</h6>
+      <p> Take a breather, relax & browse content based on your prefernces.</p>  
+      <br><br><br><br><br>
+  </div>
+  <div class="nested-section1">
+    <h3> RECOVER </h3>
+    <h6>~ Professional guidance ~</h6>
+      <p> Explore and connect with professionals who are suitable & best for you.</p>
+  </div>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+
+  <div class="nested-section2">
+    <h3> RESTART </h3>
+    <h6>~ Productivity & Efficiency ~</h6>
+     <p> Create & mainatin a productive and efficient routine.</p>
+  </div>
+
+  <br><br><br><br><br><br><br><br><br><br><br><br>
+  <div class="nested-section3" onclick="openChatbot()">
+    <h3> PAL </h3>
+    <h6>~ Perceptive accessible lad ~</h6>
+    <p> Interact with our chatbot PAL to assess how you're feeling.</p>
+  </div>
+  
+<div class="nested-section4">
+<h3> JOURNAL </h3>
+<h6> ~ Note down your feelings ~</h6>
+<p> A place to store your thoughts, feelings and ideas, you can undertsand your mood patterns & behaviour.</p>
+</div>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
+ -->
+
+</body>
+
+</html>
+{% endblock %}
+{% include "footer.html" %}
