@@ -55,7 +55,7 @@ ROOT_URLCONF = 'HiberZone.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'userapp', 'Templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
